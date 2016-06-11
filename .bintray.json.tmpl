@@ -1,0 +1,24 @@
+{
+  "package": {
+    "name": "dropwizard-freemarker-config",
+    "repo": "maven",
+    "subject": "jubicoy"
+  },
+
+  "version": {
+    "name": "${TRAVIS_TAG}",
+    "desc": "Tagged build",
+    "released": "${RELEASED_DATE}",
+    "vcs_tag": "${TRAVIS_TAG}",
+    "attributes": [],
+    "gpgSign": false
+  },
+
+  "files": [
+    {
+      "includePattern": "target/(dropwizard-freemarker-config-${TRAVIS_TAG}(.*)\.jar)",
+      "uploadPattern": "/$1"
+    }
+  ],
+  "publish": true
+}
