@@ -1,3 +1,4 @@
 .idea/*
 target/*
 dropwizard-freemarker-config.iml
+pom.xml.*
