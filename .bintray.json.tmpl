@@ -17,11 +17,11 @@
   "files": [
     {
       "includePattern": "target/(dropwizard-freemarker-config-${TRAVIS_TAG}(.*)\.jar)",
-      "uploadPattern": "${TRAVIS_TAG}/$1"
+      "uploadPattern": "/fi/jubic/dropwizard-freemarker-config/${TRAVIS_TAG}/$1"
     },
     {
       "includePattern": "./(pom.xml)",
-      "uploadPattern": "${TRAVIS_TAG}/dropwizard-freemarker-config-${TRAVIS_TAG}.pom"
+      "uploadPattern": "/fi/jubic/dropwizard-freemarker-config/${TRAVIS_TAG}/dropwizard-freemarker-config-${TRAVIS_TAG}.pom"
     }
   ],
   "publish": true

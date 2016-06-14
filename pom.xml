@@ -44,31 +44,6 @@
         <dropwizard.version>0.9.2</dropwizard.version>
     </properties>
 
-    <profiles>
-        <profile>
-            <id>ci-build</id>
-            <activation>
-                <property>
-                    <name>env.TRAVIS_TAG</name>
-                </property>
-            </activation>
-            <properties>
-                <version.tag>${env.TRAVIS_TAG}</version.tag>
-            </properties>
-        </profile>
-        <profile>
-            <id>local-build</id>
-            <activation>
-                <property>
-                    <name>!env.TRAVIS_TAG</name>
-                </property>
-            </activation>
-            <properties>
-                <version.tag>SNAPSHOT</version.tag>
-            </properties>
-        </profile>
-    </profiles>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -154,14 +129,6 @@
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <configuration>
-                    <tagNameFormat>v@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
         </plugins>
