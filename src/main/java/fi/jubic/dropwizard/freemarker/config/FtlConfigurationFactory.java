@@ -41,6 +41,12 @@ public class FtlConfigurationFactory<T> extends ConfigurationFactory<T> {
     // ConfigurationFactory impl
     // **************************************************************
     @Override
+    public T build () throws IOException, ConfigurationException {
+        ConfigurationSourceProvider provider = new ResourceConfigurationSourceProvider();
+        return build(provider, "");
+    }
+
+    @Override
     public T build (
             ConfigurationSourceProvider provider,
             String path
