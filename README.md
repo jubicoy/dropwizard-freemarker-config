@@ -1,7 +1,7 @@
 # dropwizard-freemarker-config
 
-Library for using `freemarker` templates as configuration files. 
-Inspiration for the library stems from Ruby on Rails framework that 
+Library for using `freemarker` templates as configuration files.
+Inspiration for the library stems from Ruby on Rails framework that
 allows loading `config/database.yml` as an `erb` template.
 
 ## Usage
@@ -21,13 +21,13 @@ Set `ConfigurationFactoryFactory` during application bootstrapping.
 ```java
 @Override
 public void initialize (Bootstrap<Configuration> bootstrap) {
-    
+
     bootstrap.setConfigurationFactoryFactory(
             new FtlConfigurationFactoryFactory<>(
                     new FtlDefaultEnvProvider()
             )
     );
-    
+
 }
 ```
 
@@ -42,10 +42,10 @@ Database credentials with fallback values:
 ```yaml
 database:
   user: ${(env.DB_USER)!"fallback"}
-  password: ${/env.DB_PASSWORD)!"fallback"}
+  password: ${(env.DB_PASSWORD)!"fallback"}
 ```
 
-Conditional sections. Toggling Hibernate SQL pretty printing on in 
+Conditional sections. Toggling Hibernate SQL pretty printing on in
 development env:
 
 ```yaml

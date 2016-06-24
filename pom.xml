@@ -10,8 +10,8 @@
     <packaging>jar</packaging>
 
     <name>dropwizard-freemarker-config</name>
-    <description>Freemarker Configuration Praser for Dropwizard</description>
-    <url>http://jubic.</url>
+    <description>Freemarker Configuration Parser for Dropwizard</description>
+    <url>http://jubic.fi</url>
 
     <organization>
         <name>Jubic Oy</name>
