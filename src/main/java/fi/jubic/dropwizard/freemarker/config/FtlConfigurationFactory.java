@@ -5,8 +5,8 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import io.dropwizard.configuration.ConfigurationException;
-import io.dropwizard.configuration.ConfigurationFactory;
 import io.dropwizard.configuration.ConfigurationSourceProvider;
+import io.dropwizard.configuration.YamlConfigurationFactory;
 
 import javax.validation.Validator;
 import java.io.*;
@@ -17,7 +17,7 @@ import java.util.Map;
  * @author Vilppu Vuorinen, vilppu.vuorinen@jubic.fi
  * @since 0.1, 11.6.2016.
  */
-public class FtlConfigurationFactory<T> extends ConfigurationFactory<T> {
+public class FtlConfigurationFactory<T> extends YamlConfigurationFactory<T> {
     //
     // Fields
     // **************************************************************
